@@ -2,6 +2,7 @@ package com.narainox.spring_security.config;
 
 import com.narainox.spring_security.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -9,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 @RequiredArgsConstructor
 @Service
+@EnableWebSecurity
 public class JPAUserDetailsConfig implements UserDetailsService {
 
     private final UserRepository userRepository;
